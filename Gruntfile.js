@@ -21,12 +21,6 @@ module.exports = function (grunt) {
                 files: uglifyFiles
             }
         },
-        watch: {
-            main: {
-                files: "<%= def.srcfiles %>",
-                tasks: ["build"]
-            }
-        },
         typescript: {
             main: {
                 files: {
@@ -34,7 +28,7 @@ module.exports = function (grunt) {
                 },
                 options: {
                     comments: true,
-                    base_path: "src",
+                    basePath: "src",
                     declaration: false,
                     module: "commonjs",
                     target: "ES5"
@@ -48,7 +42,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-typescript');
     grunt.registerTask("build", ["clean:main", "typescript:main", "uglify:main"]);
     grunt.registerTask('default', ["build"]);

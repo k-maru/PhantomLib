@@ -1,13 +1,12 @@
 {
   "name": "PhantomLib",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "engines": {
     "node": ">= 0.8.0"
   },
   "devDependencies": {
-    "grunt-typescript": "*",
+    "grunt-typescript": "latest",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
     "grunt-contrib-clean": "*"
   }
 }
